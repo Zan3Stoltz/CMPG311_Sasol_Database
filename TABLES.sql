@@ -1,0 +1,85 @@
+CREATE TABLE Department (
+    Dep_ID NUMBER(10) CONSTRAINT PK_DEPARTMENT PRIMARY KEY,
+    Dep_Name VARCHAR(50) NOT NULL,
+    Dep_Manager VARCHAR(50) NOT NULL,
+    Dep_ContactNumber CHAR(10) UNIQUE NOT NULL
+);
+
+CREATE TABLE Shift (
+    Shift_ID NUMBER(10) CONSTRAINT PK_SHIFT PRIMARY KEY,
+    Shift_Description VARCHAR(50) NOT NULL,
+    Shift_Date DATE NOT NULL,
+    Shift_Start DATE NOT NULL,
+    Shift_End DATE NOT NULL
+);
+
+CREATE TABLE Storage (
+    Storage_ID NUMBER(10) CONSTRAINT PK_STORAGE PRIMARY KEY, 
+    Inventory_QTY BINARY_FLOAT NOT NULL, 
+    Location VARCHAR(100) NOT NULL, 
+    Manager VARCHAR(50) NOT NULL, 
+    Contact_Num CHAR(10) UNIQUE NOT NULL
+);
+
+CREATE TABLE Qualification_Detail (
+    Qual_ID NUMBER(10) CONSTRAINT PK_QUALDETAIL PRIMARY KEY,
+    Name VARCHAR(50),
+    Description VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Destination (
+    Dest_ID NUMBER(10) CONSTRAINT PK_DESTINATION PRIMARY KEY,
+    Dest_Name VARCHAR(50) NOT NULL,
+    Dest_Location VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Employee (
+    Emp_ID NUMBER(10) CONSTRAINT PK_EMPLOYEE PRIMARY KEY,  
+    Dep_ID NUMBER(10) NOT NULL, 
+    Shift_ID NUMBER(10) NOT NULL,
+    Salary BINARY_FLOAT NOT NULL,      
+    Emp_FirstName VARCHAR(50) NOT NULL,   
+    Emp_LastName VARCHAR(50) NOT NULL,      
+    Emp_ContactNumber CHAR(10) UNIQUE NOT NULL,
+    Emp_Address VARCHAR(100) NOT NULL,     
+    Emp_Email  VARCHAR(100) UNIQUE NOT NULL,     
+    Job_Description VARCHAR(50) NOT NULL,
+    CONSTRAINT FK_DEPARTMENT FOREIGN KEY (Dep_ID) REFERENCES Department(Dep_ID),
+    CONSTRAINT FK_SHIFT FOREIGN KEY (Shift_ID) REFERENCES Shift(Shift_ID)
+);
+
+CREATE TABLE Export (
+    Export_ID NUMBER(10) CONSTRAINT PK_EXPORT PRIMARY KEY, 
+    Quantity BINARY_FLOAT NOT NULL,    
+    Transport VARCHAR(50) NOT NULL,  
+    Transport_Stat CHAR(1) NOT NULL,
+    Ship_Date DATE NOT NULL,    
+    Arrival_Date DATE NOT NULL, 
+    Sales_Price BINARY_FLOAT NOT NULL,
+    Export_Cost BINARY_FLOAT NOT NULL, 
+    Dest_ID NUMBER(10) NOT NULL,
+    CONSTRAINT FK_DESTINATION FOREIGN KEY (Dest_ID) REFERENCES Destination(Dest_ID)
+);
+
+CREATE TABLE Qualification (
+    Qual_ID NUMBER(10) REFERENCES Qualification_Detail(Qual_ID),
+    Emp_ID NUMBER(10) REFERENCES Employee(Emp_ID),
+    Qualification_Num CHAR(10) UNIQUE NOT NULL,
+    CONSTRAINT PK_QUALIFICATION PRIMARY KEY (Qual_ID,Emp_ID)
+);
+
+CREATE TABLE Pickup_Detail (
+    Storage_ID NUMBER(10) REFERENCES Storage(Storage_ID),
+    Export_ID NUMBER(10) REFERENCES Export(Export_ID),
+    Pickup_Date DATE NOT NULL,
+    CONSTRAINT PK_PICKUP PRIMARY KEY (Storage_ID,Export_ID)
+);
+
+CREATE TABLE Salary_History (
+    Emp_ID 	NUMBER(10) REFERENCES Employee(Emp_ID),
+    Sal_Date DATE CONSTRAINT PK_SALARY PRIMARY KEY,
+    Salary_Scale  NUMBER(10) NOT NULL,
+    Amount 	BINARY_FLOAT NOT NULL,
+    Overtime BINARY_FLOAT NOT NULL,
+    CONSTRAINT PK_SALHISTORY PRIMARY KEY (Emp_ID)
+);

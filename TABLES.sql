@@ -2,7 +2,7 @@ CREATE TABLE Department (
     Dep_ID NUMBER(10) CONSTRAINT PK_DEPARTMENT PRIMARY KEY,
     Dep_Name VARCHAR(50) NOT NULL,
     Dep_Manager VARCHAR(50) NOT NULL,
-    Dep_ContactNumber CHAR(10) UNIQUE NOT NULL
+    Dep_ContactNumber CHAR(12) UNIQUE NOT NULL
 );
 
 CREATE TABLE Shift (
@@ -41,7 +41,7 @@ CREATE TABLE Employee (
     Salary BINARY_FLOAT NOT NULL,      
     Emp_FirstName VARCHAR(50) NOT NULL,   
     Emp_LastName VARCHAR(50) NOT NULL,      
-    Emp_ContactNumber CHAR(10) UNIQUE NOT NULL,
+    Emp_ContactNumber CHAR(12) UNIQUE NOT NULL,
     Emp_Address VARCHAR(100) NOT NULL,     
     Emp_Email  VARCHAR(100) UNIQUE NOT NULL,     
     Job_Description VARCHAR(50) NOT NULL,

@@ -12,12 +12,11 @@ CREATE TABLE Shift (
     Shift_End DATE NOT NULL
 );
 
-CREATE TABLE Storage (
-    Storage_ID NUMBER(10) CONSTRAINT PK_STORAGE PRIMARY KEY, 
+CREATE TABLE Mine (
+    Mine_ID NUMBER(10) CONSTRAINT PK_MINE PRIMARY KEY, 
     Coal_Quantity BINARY_FLOAT NOT NULL, 
-    Location VARCHAR(100) NOT NULL, 
-    Contact_Num CHAR(12) UNIQUE NOT NULL,
-    CONSTRAINT FK_STORAGE FOREIGN KEY (Emp_ID) REFERENCES EMPLOYEE(Emp_ID)
+    Location VARCHAR(120) NOT NULL, 
+    Contact_Num CHAR(12) UNIQUE NOT NULL
 );
 
 CREATE TABLE Qualification_Detail (
@@ -75,13 +74,6 @@ CREATE TABLE Qualification (
     Emp_ID NUMBER(10) REFERENCES Employee(Emp_ID),
     Qualification_Num CHAR(10) UNIQUE NOT NULL,
     CONSTRAINT PK_QUALIFICATION PRIMARY KEY (Qual_ID,Emp_ID)
-);
-
-CREATE TABLE Pickup_Detail (
-    Storage_ID NUMBER(10) REFERENCES Storage(Storage_ID),
-    Export_ID NUMBER(10) REFERENCES Export(Export_ID),
-    Pickup_Date DATE NOT NULL,
-    CONSTRAINT PK_PICKUP PRIMARY KEY (Storage_ID,Export_ID)
 );
 
 CREATE TABLE Salary_History (

@@ -7,7 +7,6 @@ CREATE TABLE Department (
 CREATE TABLE Shift (
     Shift_ID NUMBER(10) CONSTRAINT PK_SHIFT PRIMARY KEY,
     Shift_Description VARCHAR(50) NOT NULL,
-    Shift_Date DATE NOT NULL,
     Shift_Start DATE NOT NULL,
     Shift_End DATE NOT NULL
 );

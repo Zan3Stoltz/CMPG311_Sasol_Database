@@ -50,7 +50,7 @@ CREATE TABLE Employee (
 CREATE TABLE Export (
     Export_ID NUMBER(10) CONSTRAINT PK_EXPORT PRIMARY KEY, 
     Quantity BINARY_FLOAT NOT NULL,    
-    Transport VARCHAR(50) NOT NULL,  
+    Transporter VARCHAR(50) NOT NULL,  
     Transport_Stat CHAR(1) NOT NULL,
     Ship_Date DATE NOT NULL,    
     Arrival_Date DATE NOT NULL, 

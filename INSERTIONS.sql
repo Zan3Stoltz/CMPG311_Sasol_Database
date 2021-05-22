@@ -8,13 +8,13 @@ SELECT * FROM DUAL;
 INSERT ALL
 INTO DESTINATION VALUES (1, 'Secunda', 'Pop Kruger Drive, Secunda, 2302, South Africa')
 INTO DESTINATION VALUES (2, 'Sasolburg', 'Klasie Havenga Road, Sasolburg, 1947, South Africa')
-INTO DESTINATION VALUES (3, 'Witbank', 'Inyanda Coal Mine, Emalahleni, 1039, South Africa')
-INTO DESTINATION VALUES (4, 'Richards Bay', 'South Dunes, Harbour, Richards Bay, 3900, South Africa')
-INTO DESTINATION VALUES (5, 'Johannesburg', 'First Floor Building 10, Woodmead Business Park, 142 Western Service Road, Woodmead, Sandton, 2191, South Africa')
+INTO DESTINATION VALUES (3, 'Finland', 'Kymijarvi Power Station, Lahti, Päijät-Häme, 15111, Finland')
+INTO DESTINATION VALUES (4, 'Spain', 'As Pontes Power Station, As Pontes de García Rodríguez, O Eume, A Coruña (La Coruña), Galiza (Galicia), 15327, Spain')
+INTO DESTINATION VALUES (5, 'Germany', '11 Grabener Street, Karlsruhe Power Station, Leopoldshafen, 76344, Germany')
 INTO DESTINATION VALUES (6, 'India', 'Jharia Coalfield Hywa Association, Burragarh, Jharia, Dhanbad, Jharkhand 828102, India')
 INTO DESTINATION VALUES (7, 'China', 'Liyang E Road, Shimen County, Changde, Hunan, China')
-INTO DESTINATION VALUES (8, 'Durban', 'Island View, Bluff, Kwa-Zulu Natal, 4052, South Africa')
-INTO DESTINATION VALUES (9, 'Ermelo', 'Penumbra Coal Mine, Ermelo, 2351, South Africa')
+INTO DESTINATION VALUES (8, 'England', 'West Burton Power Station, Retford, Nottinghamshire, DN22 9BL, United Kingdom')
+INTO DESTINATION VALUES (9, 'Poland', 'Bełchatów Power Plant, Bełchatów, łódź province, 97-400, Poland')
 INTO DESTINATION VALUES (10, 'Mozambique', 'TETE-SONGO HIGHWAY EN-258 VILLAGE - CHIRODZI DISTRICT - MARARA TETE, 2300, Mozambique')
 INTO DESTINATION VALUES (11, 'Wyoming', 'Gillette, Wyoming, 82718, USA')
 INTO DESTINATION VALUES (12, 'Russia', 'Mezhdurechensk, Kemerovo Oblast, 652870, Russia')
@@ -25,7 +25,7 @@ INTO DESTINATION VALUES (16, 'Swaziland', 'Farm 422, Maloma, L312, Eswatini')
 INTO DESTINATION VALUES (17, 'Vietnam', 'Hạ Long, Quảng Ninh Province, Hanoi, 100000, Vietnam')
 INTO DESTINATION VALUES (18, 'Turkey', 'Armutçuk Mine, Kandilli, Zonguldak, 67390, Turkey')
 INTO DESTINATION VALUES (19, 'Brazil', 'Florianópolis, Santa Catarina, 88330, Brazil')
-INTO DESTINATION VALUES (20, 'Phillipines', 'Semirara Island, Manila, 5711, Phillipines')
+INTO DESTINATION VALUES (20, 'Philipines', 'Semirara Island, Manila, 5711, Philipines')
 SELECT * FROM DUAL;
 
 

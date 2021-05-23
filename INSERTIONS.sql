@@ -82,11 +82,11 @@ SELECT * FROM DUAL;
 
 
 INSERT ALL
-INTO MINE VALUES (1,'Sigma Mooikraal',6673.38, 'Unnamed Road 26°56''29.2"S 27°43''51.3"E', '+27107766898'  )
-INTO MINE VALUES (2,'Sasol Twisdraai', 17.27, 'Govan Mbeki 26°27''45.2"S 29°17''18.3"E', '+27196117564')
-INTO MINE VALUES (3,'Brandspruit Mine',96141.65, 'Unnamed Road 26°35''21.5"S 29°08''43.7"E', '+27531400555' )
-INTO MINE VALUES (4,'Sigma Colliery',34290.84, 'Saltberry St, Sasolburg, 1947', '+27744793973'  )
-INTO MINE VALUES (5,'Bojespruit',26797.98, 'Standerton 26°36''23.4"S 29°13''07.1"E', '+27785594012')
+INTO MINE VALUES (1,'Sigma Mooikraal', 'Unnamed Road 26°56''29.2"S 27°43''51.3"E', '+27107766898',  6673.38)
+INTO MINE VALUES (2,'Sasol Twisdraai', 'Govan Mbeki 26°27''45.2"S 29°17''18.3"E', '+27196117564', 17.27)
+INTO MINE VALUES (3,'Brandspruit Mine', 'Unnamed Road 26°35''21.5"S 29°08''43.7"E', '+27531400555', 96141.65)
+INTO MINE VALUES (4,'Sigma Colliery', 'Saltberry St, Sasolburg, 1947', '+27744793973',  34290.84)
+INTO MINE VALUES (5,'Bojespruit', 'Standerton 26°36''23.4"S 29°13''07.1"E', '+27785594012', 26797.98)
 SELECT * FROM DUAL;
 
 

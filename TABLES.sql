@@ -15,9 +15,9 @@ CREATE TABLE Shift (
 CREATE TABLE Mine (
     Mine_ID NUMBER(10) CONSTRAINT PK_MINE PRIMARY KEY, 
     Mine_Name VARCHAR(50) UNIQUE NOT NULL,
-    Coal_Quantity BINARY_FLOAT CHECK (Coal_Quantity >= 0) NOT NULL, 
     Location VARCHAR(120) NOT NULL, 
-    Contact_Num VARCHAR(12) CHECK (LENGTH(Contact_Num) = 12 AND Contact_Num LIKE '+27%') UNIQUE NOT NULL
+    Contact_Num VARCHAR(12) CHECK (LENGTH(Contact_Num) = 12 AND Contact_Num LIKE '+27%') UNIQUE NOT NULL,
+    Coal_Quantity BINARY_FLOAT CHECK (Coal_Quantity >= 0) NOT NULL
 );
 
 CREATE TABLE Qualification_Detail (

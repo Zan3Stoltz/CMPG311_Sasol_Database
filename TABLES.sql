@@ -41,7 +41,7 @@ CREATE TABLE Employee (
     Emp_FirstName VARCHAR(50) NOT NULL,   
     Emp_LastName VARCHAR(50) NOT NULL,      
     Emp_ContactNumber VARCHAR(12) CHECK (LENGTH(Emp_ContactNumber) = 12 AND Emp_ContactNumber LIKE '+27%') UNIQUE NOT NULL,
-    Emp_Address VARCHAR(100) CHECK (Emp_Address LIKE '%@gmail%' OR Emp_Address LIKE '%@hotmail%'  AND Emp_Address LIKE '%.com') NOT NULL,     
+    Emp_Address VARCHAR(100) CHECK (Emp_Email LIKE '%@gmail%' OR Emp_Email LIKE '%@hotmail%'  AND Emp_Email LIKE '%.com') NOT NULL,     
     Emp_Email  VARCHAR(100) UNIQUE NOT NULL,     
     Job_Description VARCHAR(50) NOT NULL,
     CONSTRAINT FK_DEPARTMENT FOREIGN KEY (Dep_ID) REFERENCES Department(Dep_ID),
